@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>canvas exercice2</title>
+  </head>
+  <body>
+      <canvas id="canvas" width="400" height="400"></canvas>
+      <script type="text/javascript">
+      //Reproduire la maison en faisant des carrés et des rectangles.
+      var c = document.getElementById("canvas");
+      var ctx = c.getContext("2d");
+      // corp de la maison
+      ctx.fillStyle = "#a4d7e7";
+      ctx.fillRect(170,140,210,210);
+      //premiere fenetre
+      ctx.fillStyle = "#C9C9C9";
+      ctx.fillRect(200,160,50,50);
+      //deuxieme fenetre
+      ctx.fillStyle = "#c9c9c9";
+      ctx.fillRect(300,160,50,50);
+      //la porte
+      ctx.fillStyle = "#c9c9c9";
+      ctx.fillRect(250,270,50,80);
+      //debut du chemin du toit
+      ctx.beginPath();
+      //point de depard
+      ctx.moveTo(282,10);
+      //trait de droite
+      ctx.lineTo(380,140);
+      //trait de gauche
+      ctx.lineTo(170,140);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+      //colori l'interieure
+      ctx.fillStyle = "#D38435";
+      ctx.fill();
+
+
+      </script>
+
+  </body>
+</html>
